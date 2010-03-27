@@ -14,6 +14,10 @@ install: pidgin-awn-plugin.so
 	cp pidgin-awn-plugin.so ~/.purple/plugins/
 	cp ./*.png ~/.purple/plugins/pidgin-awn-plugin/
 
+uninstall:
+	rm -rf ~/.purple/plugins/pidgin-awn-plugin/
+	rm -f ~/.purple/plugins/pidgin-awn-plugin.so
+
 clean:
 	rm pidgin-awn-plugin.so *.o
 
