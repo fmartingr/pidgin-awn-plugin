@@ -34,10 +34,16 @@
 #define _PIDGIN_AWN_H_
 
 /* Hardcoded icon paths */
-#define PATH_IMG_AWAY			"~/.purple/plugins/pidgin-awn-plugin/pidgin-away.png"
+// Customized (not working :S)
+/*#define PATH_IMG_AWAY			"~/.purple/plugins/pidgin-awn-plugin/pidgin-away.png"
 #define PATH_IMG_CONNECTING		"~/.purple/plugins/pidgin-awn-plugin/pidgin-login.png"
 #define PATH_IMG_OFFLINE		"~/.purple/plugins/pidgin-awn-plugin/pidgin-offline.png"
-#define PATH_IMG_ONLINE			"~/.purple/plugins/pidgin-awn-plugin/pidgin-online.png"
+#define PATH_IMG_ONLINE			"~/.purple/plugins/pidgin-awn-plugin/pidgin-online.png"*/
+// Original
+#define PATH_IMG_AWAY			"/usr/share/pixmaps/pidgin/status/48/away.png"
+#define PATH_IMG_CONNECTING		"/usr/share/pixmaps/pidgin/status/48/log-in.png"
+#define PATH_IMG_OFFLINE		"/usr/share/pixmaps/pidgin/status/48/offline.png"
+#define PATH_IMG_ONLINE			"/usr/share/pixmaps/pidgin/status/48/available.png"
 
 /* Enum(s) */
 typedef enum
