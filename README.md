@@ -4,7 +4,7 @@ Continued work from [http://code.google.com/p/awn-plugins/](AWN-Plugins) that wa
 
 Just have checked the code and fixed it a bit. Now it counts the unread messages from pidgin.
 
-![Pidgin awn plugin demo](http://pidgin-awn-plugin.googlecode.com/svn/images/pidgin-awn-plugin.png)
+![Pidgin awn plugin demo](http://cdn.fmartingr.com/github/pidgin-awn-plugin.png)
 
 ## Known issues
 
