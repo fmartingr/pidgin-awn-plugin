@@ -1,6 +1,6 @@
 /*
  * AWN plugin for Pidgin
- * Copyright (C) 2010 Felipe (Pyronhell) Martin <pyronhell@gmail.com>
+ * Copyright (C) 2012 Felipe (Pyronhell) Martin <me@fmartingr.com>
  * Copyright from other people that wrote code with another purpose:
  * Copyright (C) 2007 Michael (mycroes) Croes <mycroes@gmail.com>
  * Copyright (C) 2002-3 Robert McQueen <robot101@debian.org>
@@ -33,17 +33,20 @@
 #ifndef _PIDGIN_AWN_H_
 #define _PIDGIN_AWN_H_
 
-/* Hardcoded icon paths */
-// Customized (not working :S)
-/*#define PATH_IMG_AWAY			"~/.purple/plugins/pidgin-awn-plugin/pidgin-away.png"
-#define PATH_IMG_CONNECTING		"~/.purple/plugins/pidgin-awn-plugin/pidgin-login.png"
-#define PATH_IMG_OFFLINE		"~/.purple/plugins/pidgin-awn-plugin/pidgin-offline.png"
-#define PATH_IMG_ONLINE			"~/.purple/plugins/pidgin-awn-plugin/pidgin-online.png"*/
-// Original
+/* Customized icons */
+#define PATH_IMG_AWAY			"/.purple/plugins/pidgin-awn-plugin/pidgin-away.png"
+#define PATH_IMG_CONNECTING		"/.purple/plugins/pidgin-awn-plugin/pidgin-login.png"
+#define PATH_IMG_OFFLINE		"/.purple/plugins/pidgin-awn-plugin/pidgin-offline.png"
+#define PATH_IMG_ONLINE			"/.purple/plugins/pidgin-awn-plugin/pidgin-online.png"
+#define PATH_IMG_BUSY			"/.purple/plugins/pidgin-awn-plugin/pidgin-busy.png"
+/* Original icons */
+/*
 #define PATH_IMG_AWAY			"/usr/share/pixmaps/pidgin/status/48/away.png"
 #define PATH_IMG_CONNECTING		"/usr/share/pixmaps/pidgin/status/48/log-in.png"
 #define PATH_IMG_OFFLINE		"/usr/share/pixmaps/pidgin/status/48/offline.png"
 #define PATH_IMG_ONLINE			"/usr/share/pixmaps/pidgin/status/48/available.png"
+#define PATH_IMG_BUSY			"/usr/share/pixmaps/pidgin/status/48/busy.png"
+*/
 
 /* Enum(s) */
 typedef enum
@@ -53,6 +56,7 @@ typedef enum
 	AWN_STATUS_ONLINE_PENDING,
 	AWN_STATUS_AWAY,
 	AWN_STATUS_AWAY_PENDING,
+	AWN_STATUS_BUSY,
 	AWN_STATUS_CONNECTING
 } AwnStatus;
 

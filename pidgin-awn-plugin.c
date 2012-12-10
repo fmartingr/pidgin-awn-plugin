@@ -1,6 +1,6 @@
 /*
  * AWN plugin for Pidgin
- * Copyright (C) 2010 Felipe (Pyronhell) Martin <pyronhell@gmail.com>
+ * Copyright (C) 2012 Felipe (Pyronhell) Martin <me@fmartingr.com>
  * Copyright from other people that wrote code with another purpose:
  * Copyright (C) 2007 Michael (mycroes) Croes <mycroes@gmail.com>
  * Copyright (C) 2002-3 Robert McQueen <robot101@debian.org>
@@ -58,6 +58,7 @@
 
 #include <stdlib.h>
 #include <glib.h>
+#include <string.h>
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-bindings.h>
 
@@ -79,10 +80,10 @@ static PurplePluginInfo info = {
 	"AWN plugin",
 	VERSION,
 	
-	"Avant Window Navigator plugin",
-	"A plugin for Pidgin to show useful information in AWN",
-	"Pyronhell <pyronhell@gmail.com>",
-	"http://code.google.com/p/pidgin-awn-plugin",
+	"Avant Window Navigator unread count",
+	"A plugin for Pidgin to show unread message count on the dock",
+	"Felipe \"Pyronhell\" Martín <me@fmartingr.com>",
+	"http://github.com/fmartingr/pidgin-awn-plugin",
 	
 	plugin_load,
 	plugin_unload,
@@ -214,21 +215,27 @@ static void unsetAwnInfo() {
  ****************************/
 
 static void update_icon(AwnStatus newStatus) {
+	char icon[128];
+	strcpy(icon, getenv("HOME"));
 	switch (newStatus) {
 		case AWN_STATUS_OFFLINE:
-			setAwnIcon(PATH_IMG_OFFLINE);
+			strcat(icon, PATH_IMG_OFFLINE);
 			break;
 		case AWN_STATUS_ONLINE:
 		case AWN_STATUS_ONLINE_PENDING:
-			setAwnIcon(PATH_IMG_ONLINE);
+			strcat(icon, PATH_IMG_ONLINE);
 			break;
 		case AWN_STATUS_AWAY:
 		case AWN_STATUS_AWAY_PENDING:
-			setAwnIcon(PATH_IMG_AWAY);
+			strcat(icon, PATH_IMG_AWAY);
+			break;
+		case AWN_STATUS_BUSY:
+			strcat(icon, PATH_IMG_BUSY);
 			break;
 		default:
-			setAwnIcon(PATH_IMG_CONNECTING);
+			strcat(icon, PATH_IMG_CONNECTING);
 	}
+	setAwnIcon(icon);
 }
 
 static GList * get_pending_list()

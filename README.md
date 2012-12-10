@@ -1,14 +1,13 @@
 Pidgin AWN plugin
 =================
-Continued work from [http://code.google.com/p/awn-plugins/](AWN-Plugins) that was a bit old.
+I have recovered this project from the [caverns of time](http://code.google.com/p/pidgin-awn-plugin/). Was originally forked from [awn-plugins](http://code.google.com/p/awn-plugins/).
 
-Just have checked the code and fixed it a bit. Now it counts the unread messages from pidgin.
-
+This plugin shows the unread message count from your conversations and changes your AWN Pidgin icon to show your current status.
 ![Pidgin awn plugin demo](http://cdn.fmartingr.com/github/pidgin-awn-plugin.png)
 
 ## Known issues
 
-My custom png icons don't work.
+- Busy status not working
 
 ## How to install
 
